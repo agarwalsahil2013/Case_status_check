@@ -10,6 +10,6 @@ def some_job():
 		return case_status_check(rn,pn)
 
 scheduler = BlockingScheduler()
-scheduler.add_job(some_job, 'cron', day_of_week = 'mon-fri', hour=12)
-#scheduler.add_job(some_job, 'interval', seconds=15)
+#scheduler.add_job(some_job, 'cron', day_of_week = 'mon-fri', hour=12)
+scheduler.add_job(some_job, 'interval', seconds=25)
 scheduler.start()
