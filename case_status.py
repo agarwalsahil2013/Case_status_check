@@ -21,7 +21,7 @@ options.add_argument("--no-sandbox")
 options.add_argument("enable-automation")
 options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage")
-chrome_browser = webdriver.Chrome((executable_path=os.environ.get("CHROMEDRIVER_PATH"),options=options)
+chrome_browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),options=options)
 
 # chrome_browser = webdriver.Chrome('./chromedriver')
 # chrome_browser.get(url)
