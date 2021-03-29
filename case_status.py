@@ -54,14 +54,14 @@ def case_status_check(receipt_number,phone_num):
 	if update_case == "Case Was Received":
 		message = client.messages.create(  
                               messaging_service_sid='MG9f8f8674445c2faab902051a9604ea65', 
-                              body = f"Your case status is same as '{update_case}'",      
+                              body = f"Your case number of {receipt_number} has same status as '{update_case}'",      
                               to=phone_num 
                           )
 		return "Message sent successfully...."
 	else:
 		message = client.messages.create(  
                               messaging_service_sid='MG9f8f8674445c2faab902051a9604ea65', 
-                              body = f"HURRAY!! \nCongratulations, your case status has changed to '{update_case}'",      
+                              body = f"HURRAY!! \nCongratulations, your case number {receipt_number} has changed status to '{update_case}'",      
                               to=phone_num 
                           )
 		return "Message sent successfully......."
