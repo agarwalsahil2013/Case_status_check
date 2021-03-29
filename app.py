@@ -53,7 +53,7 @@ def verified_user():
 	rec_num = session.get('receipt_number')
 	final_ph_no = "+"+cn_code+ph_num
 	result = case_status_check(rec_num, final_ph_no)
-	return Response(f"This <b>{final_ph_no}</b> number is already verified !!!<br/> We are sending your status on your registered phone number......<br/><b>{result}</b>")
+	return Response(f"You've already subscribed for receiving <b>weekday (Mon-Fri) status at 10 a.m.</b> You'll receive the updates on <b>{final_ph_no}</b> number !!!<br/>.......<br/><b>{result}</b>")
 	
 @app.route("/verify", methods=["GET", "POST"])
 def verify():
@@ -76,7 +76,7 @@ def verify():
 			data['datetime'] = date_time
 
 			write_to_csv(data)
-			return	output_message
+			return	f"Congratulations!! You're now subscribed member of receiving case status each <b>weekday (Mon-Fri) at 10 a.m.</b> You'll receive the updates on <b>{final_ph_no}</b> number !!!<br/>.......<br/><b>{output_message}</b>"
 
 	return render_template("verify.html")
 
