@@ -57,16 +57,14 @@ def case_status_check(receipt_number,phone_num):
                               body = f"Your case status is same as '{update_case}'",      
                               to=phone_num 
                           )
-		return "Message sent successfully...." 
-	elif (update_case == "Card Was Mailed To Me") or (update_case == "Card Was Picked Up By The United States Postal Service"):
+		return "Message sent successfully...."
+	else:
 		message = client.messages.create(  
                               messaging_service_sid='MG9f8f8674445c2faab902051a9604ea65', 
                               body = f"HURRAY!! \nCongratulations, your case status has changed to '{update_case}'",      
                               to=phone_num 
                           )
 		return "Message sent successfully......."
-	else:
-		return f"ERROR: There is some problem"
 
 
 
