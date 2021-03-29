@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 from twilio.rest import Client
 #import pandas as pd
 #from waitress import serve
@@ -18,7 +19,7 @@ options.add_argument("--no-sandbox")
 options.add_argument("enable-automation")
 options.add_argument("--disable-infobars")
 options.add_argument("--disable-dev-shm-usage")
-chrome_browser = webdriver.Chrome("./chromedriver",options=options)
+chrome_browser = webdriver.Chrome(executable_path=ChromeDriverManager().install(),options=options)
 
 # chrome_browser = webdriver.Chrome('./chromedriver')
 # chrome_browser.get(url)
