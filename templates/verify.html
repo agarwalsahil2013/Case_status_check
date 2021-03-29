@@ -1,0 +1,24 @@
+<html>
+  <head>
+        <title>Phone Verification</title>
+        <style>
+    input{
+      font-size: 25px;
+    }
+  </style>
+  </head>
+
+  <body>
+    <center>
+        <h1 style="padding: 20px">Verify</h1>
+
+        <form action="/verify" accept-charset="UTF-8" method="post" style="font-size: 40px; margin: 60px; padding: 60px">
+          <div>
+            <label>Enter the code you were sent:</label>
+            <input name="token" id="token">
+          </div>
+          <button name="button" type="submit" style="font-size: 30px">Verify</button>
+        </form>
+    </center>
+  </body>
+</html>
