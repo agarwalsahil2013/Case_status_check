@@ -18,14 +18,14 @@ def write_to_csv(data):
 		receipt_number = data['receipt_number']
 		datetime = data['datetime']
 		contact_number = "+"+country_code+phone_number
-		csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+		csv_writer = csv.writer(csvfile1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 		csv_writer.writerow([receipt_number, contact_number, datetime])
 
 @app.route("/", methods=["GET", "POST"])
 def phone_verification():
 	if request.method == "POST":
 		datab = pd.read_csv('database.csv')
-		datab['phone_number'] = datab['phone_number'].astype(str)
+		datab['contact_number'] = datab['contact_number'].astype(str)
 		data = request.form.to_dict()
 		receipt_number = request.form.get("receipt_number")
 		country_code = request.form.get("country_code")
@@ -38,7 +38,7 @@ def phone_verification():
 		session['data'] = data
 
 		final_ph_num = country_code+phone_number
-		if final_ph_num in set(datab['phone_number']):
+		if final_ph_num in set(datab['contact_number']):
 			return redirect(url_for("verified_user"))
 		else:
 			api.phones.verification_start(phone_number, country_code, via=method)
