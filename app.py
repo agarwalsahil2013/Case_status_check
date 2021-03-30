@@ -18,7 +18,7 @@ def write_to_csv(data):
 		receipt_number = data['receipt_number']
 		datetime = data['datetime']
 		contact_number = "+"+country_code+phone_number
-		csv_writer = csv.writer(csvfile1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+		csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 		csv_writer.writerow([receipt_number, contact_number, datetime])
 
 @app.route("/", methods=["GET", "POST"])
