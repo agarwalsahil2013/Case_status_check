@@ -12,13 +12,13 @@ app.secret_key = 'super-secret'
 api = AuthyApiClient(app.config['AUTHY_API_KEY'])
 
 def write_to_csv(data):
-	with open('database.csv', newline='', mode = "a") as database:
+	with open('database.csv', 'w', newline='') as csvfile:
 		phone_number = data['phone_number']
 		country_code = data['country_code']
 		receipt_number = data['receipt_number']
 		date_time = data['datetime']
 		final_phone = "+"+country_code+phone_number
-		csv_writer = csv.writer(database, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+		csv_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 		csv_writer.writerow([receipt_number, final_phone, date_time])
 
 @app.route("/", methods=["GET", "POST"])
