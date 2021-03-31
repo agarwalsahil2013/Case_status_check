@@ -1,9 +1,11 @@
+# Importing libraries
 from authy.api import AuthyApiClient
 from flask import Flask, render_template, request, redirect, url_for, session, Response
 from case_status import case_status_check
 import csv
 import pandas as pd
 from datetime import datetime
+
 
 app = Flask(__name__)
 app.config.from_object('config')
