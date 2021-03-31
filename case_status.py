@@ -1,18 +1,22 @@
+# Importing libraries
 from selenium import webdriver
 import time
 from selenium.webdriver.chrome.options import Options
 import os
-# from webdriver_manager.chrome import ChromeDriverManager
 from twilio.rest import Client
 #import pandas as pd
 #from waitress import serve
+# from webdriver_manager.chrome import ChromeDriverManager
 
+# Twilio authentication
 account_sid = 'AC43f4b6512603af5076e79d030fcaf815' 
 auth_token = 'd74f8fa60f804f609d9bcac3c407b04d' 
 client = Client(account_sid, auth_token) 
 
+# USCIS website url
 url = "https://egov.uscis.gov/casestatus/landing.do"
 
+# Chrome Browser configuration
 options = Options()
 options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 options.add_argument("--headless")
@@ -27,6 +31,10 @@ chrome_browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_P
 # chrome_browser.get(url)
 
 def case_status_check(receipt_number,phone_num):
+	"""
+	This code receives user's receipt and phone number to find the status
+	of their application and sends an instant notification on their number.
+	"""
 	chrome_browser.get(url)
 	case_num = chrome_browser.find_element_by_xpath('//input[@type="text"]')
 	submit_button = chrome_browser.find_element_by_xpath('//input[@type="submit"]') 
@@ -40,10 +48,7 @@ def case_status_check(receipt_number,phone_num):
 	case_status = chrome_browser.find_element_by_xpath('//div[@class="rows text-center"]/h1')
 	update_case = case_status.text
 
-	# df = pd.read_csv('database.csv')
-	# df['phone_number'] = df['phone_number'].astype(str)
-	# phone_num = phone_num[1:]
-
+	# Register user's phone number in twilio
 	# if phone_num not in set(df['phone_number']): 
 	# 	validation_request = client.validation_requests \
 	#                            .create(
@@ -65,6 +70,3 @@ def case_status_check(receipt_number,phone_num):
                               to=phone_num 
                           )
 		return "Message sent successfully......."
-
-
-
