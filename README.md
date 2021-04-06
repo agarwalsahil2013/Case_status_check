@@ -8,7 +8,7 @@ This is the most interesting project I have ever made. I created a **web app** w
 [**OPT Case Status Check**](https://github.com/agarwalsahil2013/Case_status_check/blob/main/case_status.py).
 
 ## Deployed Model on Heroku
-You can test the model on **Heroku** from this [**link**](https://casestatus.herokuapp.com/). I'm having good time to receive update of my application **everyday at 10:00 a.m.** It's so simple and easy to register your receipt and phone number. Below steps will navigate you to register your application too.
+You can test the model on **Heroku** from this [**link**](https://casestatus.herokuapp.com/). I'm having a good time receiving an update of my application **every day at 10:00 a.m.** It's so simple and easy to register your receipt and phone number. Below steps will navigate you to register your application too.
 
 <img src="https://github.com/agarwalsahil2013/Case_status_check/blob/main/Images/Case_Status_Project_Overview.gif" />
 <img src="https://github.com/agarwalsahil2013/Case_status_check/blob/main/Images/Case_Status_Messages.jpeg" height="400px"/>
