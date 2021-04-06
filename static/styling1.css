@@ -1,0 +1,203 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img{
+	width: 10%;
+	position: absolute;
+	top:5%;
+	left: 5%;
+}
+main{
+	min-height: 100vh;
+	background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.glass{
+	background: white;
+	max-height: 80vh;
+	width: 60%;
+	margin: 35px;
+	background: linear-gradient(
+		to right bottom, 
+		rgba(255,255,255,0.7), 
+		rgba(255,255,255,0.3)
+		);
+	border-radius: 2rem;
+	z-index: 2;
+	backdrop-filter: blur(2rem);
+}
+
+.circle1,
+.circle2 {
+	background: white;
+	background: linear-gradient(
+		to right bottom, 
+		rgba(255,255,255,0.8), 
+		rgba(255,255,255,0.3)
+		);
+	height: 10rem;
+	width: 10rem;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.circle1{
+	top: 0%;
+	right: 15%;
+}
+
+.circle2{
+	bottom: 2%;
+	left: 15%;
+}
+
+.casenumber,
+.contactinfo,
+.verificationmethod{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.casenumber input,
+.casenumber label{
+	margin-top: 20px;
+	font-size: 20px;
+	border-radius: 2rem;
+}
+.randomtext{
+	margin-top:70px;
+	text-align: center;
+}
+.registerphone{
+	margin-left: 120px;
+	border:1px solid;
+	width: 70%;
+	border-radius: 2rem;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.casenumber h1, .contactinfo h1{
+	margin-bottom: 10px;
+}
+.registerphone input,
+.registerphone label{
+	margin-top: 20px;
+	font-size: 20px;
+	border-radius: 2rem;
+}
+
+.verificationmethod p{
+	font-weight: bold;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+input[type=radio]{
+	width: 20px;
+	height: 20px;
+}
+.verificationmethod input,
+.verificationmethod label{
+	margin-left: 10px;
+	font-size: 25px;
+}
+
+.verificationmethod button{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding: 15px;
+	font-size: 20px;
+	border-radius: 2rem;
+	background: linear-gradient(
+		to right bottom, 
+		rgba(255,255,255,0.8), 
+		rgba(255,255,255,0.3)
+		);
+	font-weight: bold;
+	}
+button:hover{
+	background-color: #65dfc9;
+}
+
+.message{
+	color: #9e3e3e;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.glass1{
+	background: white;
+	min-height: 80vh;
+	width: 60%;
+	margin: 35px;
+	background: linear-gradient(
+		to right bottom, 
+		rgba(255,255,255,0.7), 
+		rgba(255,255,255,0.3)
+		);
+	border-radius: 2rem;
+	z-index: 2;
+	backdrop-filter: blur(2rem);
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	justify-content: center;
+}
+
+.glass1 h1{
+	font-size: 50px;
+	margin-bottom: 50px;
+}
+.pleaseverify label,
+.pleaseverify input{
+	font-size: 25px;
+	border-radius: 2rem;
+}
+.pleaseverify button{
+	margin: 50px 0px 10px 250px;
+	padding: 15px;
+	font-size: 20px;
+	border-radius: 2rem;
+	background: linear-gradient(
+		to right bottom, 
+		rgba(255,255,255,0.8), 
+		rgba(255,255,255,0.3)
+		);
+	font-weight: bold;
+	}
+button:hover{
+	background-color: #65dfc9;
+}
+
+.glass1 p{
+	font-size: 25px;
+	text-align: center;
+}
+/* Footer */
+.footer{
+	background-color: rgba(233,233,233,0.8);
+	color: #000000;
+	padding-top: 5px;
+	width:100%;
+    text-align: center;
+}
+
+.contact-icon{
+	color: black;
+	padding: 5px;
+}
+.contact-icon:hover{
+	color: #a6a19a;
+}
+.footer-description{
+	padding-top: 3px;
+	margin: 0;
+	font-size: 1em;
+	font-weight: 10;
+}

@@ -1,0 +1,56 @@
+<html>
+  <head>
+        <title>Case Status</title>
+        <link rel="stylesheet" type="text/css" href="../static/styling1.css">
+        <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.css" data-turbolinks-track="reload" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.js" data-turbolinks-track="reload"></script>
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <main>
+      <img src="https://cdn1.iconfinder.com/data/icons/andriod-app-logo/32/icon_telegram-512.png" align="left">
+    
+      <section class="glass">
+        <form action="/" accept-charset="UTF-8" method="post">
+          <div class="casenumber">
+            <h1>Your case/receipt number</h1>
+            <label for="receipt_number">Case/Receipt Number:</label>
+            <input id="receipt-number" type="case" name="receipt_number" placeholder="receipt number" />
+          </div>
+          <div class="randomtext">
+            <h1>Verify your phone number</h1>
+          </div>
+          <div class="registerphone">
+            <div class="contactinfo">
+              <label for="authy-countries">Country code:</label>
+              <select name="country_code" id="authy-countries" data-show-as="number"></select><br/>
+              <label for="phone_number">Phone number:</label>
+              <input type="tel" name="phone_number" id="phone_number" placeholder="1234567890" />
+            </div>
+            <div class="verificationmethod">
+              <p>Verification method</p>
+              <label for="method_sms">SMS: </label>
+              <input type="radio" name="method" id="method_sms" value="sms" />
+              <label for="method_call">Call: </label>
+              <input type="radio" name="method" id="method_call" value="call" /><br/>
+              <button name="button" type="submit">Verify</button>
+            </div>
+          </div><br/>
+          {% if message %}
+          <p class="message">{{ message | safe }}</p>
+          {% endif %}
+        </form>
+      </section>
+      <div class="footer">
+        <div class="contact">
+          <a target="_blank" href="https://github.com/agarwalsahil2013/ImagePrediction.git"><i class="fab fa-github fa-lg contact-icon"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/sahil-agarwal-/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+        </div>
+        <p class="footer-description">&copy; Made by Sahil Agarwal</p>
+      </div>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+  </body>
+</html>
