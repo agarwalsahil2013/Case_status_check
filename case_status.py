@@ -9,8 +9,8 @@ from twilio.rest import Client
 # from webdriver_manager.chrome import ChromeDriverManager
 
 # Twilio authentication
-account_sid = 'AC43f4b6512603af5076e79d030fcaf815' 
-auth_token = '1fa3a56679e3632a35da3080dbb56700' 
+account_sid = 'YOUR TWILIO SID' 
+auth_token = 'YOUR TWILIO TOKEN NUMBER' 
 client = Client(account_sid, auth_token) 
 
 # USCIS case status check url
