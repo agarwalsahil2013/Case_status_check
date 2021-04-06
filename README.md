@@ -10,8 +10,8 @@ This is the most interesting project I have ever made. I created a **web app** w
 ## Deployed Model on Heroku
 You can test the model on **Heroku** from this [**link**](https://casestatus.herokuapp.com/). I'm having good time to receive update of my application **everyday at 10:00 a.m.** It's so simple and easy to register your receipt and phone number. Below steps will navigate you to register your application too.
 
-<img src="https://github.com/agarwalsahil2013/Case_status_check/blob/main/Images/Case_Status_Project_Overview.gif" />
-<img align="left" src="https://github.com/agarwalsahil2013/Case_status_check/blob/main/Images/Case_Status_Messages.jpeg" height="500px"/>
+<img align="left" src="https://github.com/agarwalsahil2013/Case_status_check/blob/main/Images/Case_Status_Project_Overview.gif" />
+<img src="https://github.com/agarwalsahil2013/Case_status_check/blob/main/Images/Case_Status_Messages.jpeg" height="500px"/>
 
 ## Recommendation
 Feel free to reach out to me for any questions or suggestions. You can find me on <a href="https://www.linkedin.com/in/sahil-agarwal-"><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" width="20" height="20" /></a>. For more projects, you can visit over here.<a href="https://github.com/agarwalsahil2013"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" width="20" height="20" /></a>
