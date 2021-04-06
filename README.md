@@ -4,8 +4,8 @@
 Hello fellas, Nice to see you here. Let me explain the whole project.
 
 ## Introduction
-This is the most interesting project I have ever made. I created a **web app** where a user needs to register their **phone number** and **receipt number** (use to track OPT application). Once the phone number gets verified through SMS or Phone. Users will get an instant message about their status of the application. Not only that, the user will automatically enroll in receiving a daily update of their application which will directly send to their registered phone number. This is the main code that does the backend job.
-[**OPT Case Status Check**](https://github.com/agarwalsahil2013/Case_status_check/blob/main/case_status.py).
+This is the most interesting project I have ever made. I created a **web app** where a user needs to register their **phone number** and **receipt number** (use to track OPT application). Once the phone number gets verified through SMS or Phone. Users will get an instant message about their status of the application. Not only that, the user will automatically enroll in receiving a daily update of their application which will directly send to their registered phone number. Here is the main code that does most of my backend job -->
+[**Main Backend Code**](https://github.com/agarwalsahil2013/Case_status_check/blob/main/case_status.py).
 
 ## Deployed Model on Heroku
 You can test the model on **Heroku** from this [**link**](https://casestatus.herokuapp.com/). I'm having a good time receiving an update of my application **every day at 10:00 a.m.** It's so simple and easy to register your receipt and phone number. Below steps will navigate you to register your application too.
